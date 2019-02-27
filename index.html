@@ -128,52 +128,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-02-27T13:45:41.053Z">2019-02-27</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/java/">java</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a few seconds read (About 3 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/02/27/cate3/">分类测试</a>
-            
-        </h1>
-        <div class="content">
-            <p>the second</p>
-<h1 id="test"><a href="#test" class="headerlink" title="test"></a>test</h1>
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-02-27T13:44:42.244Z">2019-02-27</time>
+                <time class="level-item has-text-grey" datetime="2019-02-27T14:22:51.225Z">2019-02-27</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/hexo/">hexo</a>
@@ -183,7 +138,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 3 words)
+                    7 minutes read (About 1054 words)
                 </span>
                 
                 
@@ -192,56 +147,22 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/02/27/cate2/">分类测试</a>
+                <a class="has-link-black-ter" href="/2019/02/27/第一章 计算机系统/">分类测试</a>
             
         </h1>
         <div class="content">
-            <p>the second</p>
-<h1 id="test"><a href="#test" class="headerlink" title="test"></a>test</h1>
-        </div>
-        
-        
-        
-    </div>
-</div>
+            <h2 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h2><p>计算机使用8位二进制位组成的字节表示的唯一的整数来表示字符。<br>系统中所有的信息，都是由一串比特序列组成的。区分不同数据对象的唯一方法是读取数据对象的上下文 。<br>C语句-低级机器语言指令-可执行目标程序（以二进制磁盘文件存储，也称可执行目标文件）。<br>从程序文件翻译成目标文件。翻译过程分为四个阶段，<strong>预处理器，编译期，汇编器，链接器</strong>，构成了编译系统。<br><img src="D:\download\截图 (5" alt="截图 (5)">.png)<br>hello.o目标文件中调用了库函数printf，而库函数存于与已经编译好的另一个目标文件printf.o中，链接器用于将其合并。</p>
+<h2 id="2-系统的硬件组成"><a href="#2-系统的硬件组成" class="headerlink" title="2.系统的硬件组成"></a>2.系统的硬件组成</h2><p>总线被设计成传送定长的字节块，称之为字。字中的字节数（即字长）是一个基本的系统参数，各个系统中不尽相同。字长是4个字节（32位），8个字节（64位）。<br>控制器与适配器：控制器集成在IO设备上或者主板芯片上，适配器作为外设，插在主板插槽上。<br><img src="D:\download\截图 (6" alt="截图 (6)">.png)<br>寄存器，程序计数器，大小为一个字。处理器核心。<br>寄存器文件：小的存储设备，由一些单个字长的寄存器组成。<br>加载：从主存复制一个字节或者一个字到寄存器，以覆盖寄存器原来的内容。内存-&gt;寄存器<br>存储：从寄存器复制一个字节或者一个字到内存的某个位置，以覆盖这个位置上原来的内容。寄存器-&gt;内存<br>操作：把连个寄存器的内容赋值到ALU，ALU对这连个字做算术运算，并将结果存放到一个寄存器中，以覆盖该寄存器中原来的内容。<br>跳转：从指令本身抽取一个字，并将这个字复制到程序计数器汇(P;C)中，以覆盖PC中原来的值。</p>
+<p>利用直接存储器存取（DMA），数据不通过寄存器从磁盘直接到内存。<br><img src="D:\download\截图 (7" alt="截图 (7)">.png)</p>
+<p><img src="D:\download\截图 (8" alt="截图 (8)">.png)</p>
+<h2 id="3-操作系统"><a href="#3-操作系统" class="headerlink" title="3.操作系统"></a>3.操作系统</h2><p><img src="D:\download\截图 (9" alt="截图 (9)">.png)<br>进程是操作系统对一个正在运行的程序的一种抽象。<br>并发执行：一个进程的指令和另一个进程的指令是交错执行的。<br>处理器在进程间切换，实现一个CPU并发执行多个进程。<br>操作系统实现交错执行的机制称为上下文切换。</p>
+<p>操作系统保持跟踪进程运行所需的所有状态信息。这种状态，就是上下文。（包括PC和寄存器文件的当前值及主存的内容）。<br>从一个进程到另一个进程的转换是由操作系统内行人管理的。内核是操作系统代码常驻主存的部分。<br>应用程序运行（用户态）-执行某些操作（文件读写）-进行系统调用-控制权转到操作系统（内核态）-内核执行请求操作-返回应用程序（用户态）<br><img src="D:\download\截图 (10" alt="截图 (10)">.png)</p>
+<p>内核不是一个进程，是系统管理所有进程代码和数据结构的集合。<br><img src="D:\download\截图 (11" alt="截图 (11)">.png)</p>
+<h2 id="4-并发与并行"><a href="#4-并发与并行" class="headerlink" title="4.并发与并行"></a>4.并发与并行</h2><p>并发：指一个同时具有多个活动的系统。<br>并行：用并发来使一个系统运行的更快。<br>线程级并发<br><img src="D:\download\截图 (12" alt="截图 (12)">.png)<br><img src="D:\download\截图 (13" alt="截图 (12)">.png)</p>
+<p>超线程：同时多线程，一个CPU执行多个控制流的技术。</p>
+<p>指令级并行：处理器同时执行多条指令。<br>单指令、多数据并行</p>
+<p><img src="D:\download\截图 (14" alt="截图 (12)">.png)</p>
 
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-02-27T13:38:51.294Z">2019-02-27</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Java虚拟机/">Java虚拟机</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Java虚拟机/Jvm基础/">Jvm基础</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a few seconds read (About 0 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/02/27/cate1/">运行时数据区域</a>
-            
-        </h1>
-        <div class="content">
-            
         </div>
         
         
@@ -349,90 +270,6 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-02-26T08:55:15.617Z">2019-02-26</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a few seconds read (About 29 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/02/26/Today/"></a>
-            
-        </h1>
-        <div class="content">
-            <hr>
-<h2 id="title-today"><a href="#title-today" class="headerlink" title="title: today"></a>title: today</h2><h1 id="Today"><a href="#Today" class="headerlink" title="Today"></a><strong>Today</strong></h1><h1 id="I-do-something-without-result"><a href="#I-do-something-without-result" class="headerlink" title="I do something without result"></a>I do something without result</h1><h2 id="I-play-th-e-typora"><a href="#I-play-th-e-typora" class="headerlink" title="I play th e typora"></a>I play th e typora</h2><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public void test()&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="D:\hexo\source\_posts\today\审核.png" alt="审核"></p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public int get()&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-02-26T07:09:33.217Z">2019-02-26</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a few seconds read (About 0 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/02/26/first/"></a>
-            
-        </h1>
-        <div class="content">
-            
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2019-02-25T14:17:34.508Z">2019-02-25</time>
                 
                 
@@ -519,7 +356,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        8
+                        4
                     </p>
                 </div>
             </div>
@@ -529,7 +366,7 @@
                         Categories
                     </p>
                     <p class="title has-text-weight-normal">
-                        5
+                        2
                     </p>
                 </div>
             </div>
@@ -637,33 +474,9 @@
             </h3>
             <ul class="menu-list">
             <li>
-        <a class="level is-marginless" href="/categories/Java虚拟机/">
-            <span class="level-start">
-                <span class="level-item">Java虚拟机</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a><ul><li>
-        <a class="level is-marginless" href="/categories/Java虚拟机/Jvm基础/">
-            <span class="level-start">
-                <span class="level-item">Jvm基础</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li></ul></li><li>
         <a class="level is-marginless" href="/categories/hexo/">
             <span class="level-start">
                 <span class="level-item">hexo</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/java/">
-            <span class="level-start">
-                <span class="level-item">java</span>
             </span>
             <span class="level-end">
                 <span class="level-item tag">1</span>
@@ -697,7 +510,7 @@
         
         <article class="media">
             
-            <a href="/2019/02/27/cate3/" class="media-left">
+            <a href="/2019/02/27/第一章 计算机系统/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="分类测试">
                 </p>
@@ -705,48 +518,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-27T13:45:41.053Z">2019-02-27</time></div>
-                    <a href="/2019/02/27/cate3/" class="has-link-black-ter is-size-6">分类测试</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/java/">java</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/02/27/cate2/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="分类测试">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-27T13:44:42.244Z">2019-02-27</time></div>
-                    <a href="/2019/02/27/cate2/" class="has-link-black-ter is-size-6">分类测试</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-27T14:22:51.225Z">2019-02-27</time></div>
+                    <a href="/2019/02/27/第一章 计算机系统/" class="has-link-black-ter is-size-6">分类测试</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/hexo/">hexo</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/02/27/cate1/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="运行时数据区域">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-27T13:38:51.294Z">2019-02-27</time></div>
-                    <a href="/2019/02/27/cate1/" class="has-link-black-ter is-size-6">运行时数据区域</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Java虚拟机/">Java虚拟机</a> / <a class="has-link-grey -link" href="/categories/Java虚拟机/Jvm基础/">Jvm基础</a>
                     </p>
                 </div>
             </div>
@@ -790,6 +565,25 @@
             </div>
         </article>
         
+        <article class="media">
+            
+            <a href="/2019/02/25/hello-world/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-25T14:17:34.508Z">2019-02-25</time></div>
+                    <a href="/2019/02/25/hello-world/" class="has-link-black-ter is-size-6">Hello World</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
     </div>
 </div>
 
@@ -808,7 +602,7 @@
                     <span class="level-item">February 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">8</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -851,7 +645,7 @@
         
         <article class="media">
             
-            <a href="/2019/02/27/cate3/" class="media-left">
+            <a href="/2019/02/27/第一章 计算机系统/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="分类测试">
                 </p>
@@ -859,48 +653,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-27T13:45:41.053Z">2019-02-27</time></div>
-                    <a href="/2019/02/27/cate3/" class="has-link-black-ter is-size-6">分类测试</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/java/">java</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/02/27/cate2/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="分类测试">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-27T13:44:42.244Z">2019-02-27</time></div>
-                    <a href="/2019/02/27/cate2/" class="has-link-black-ter is-size-6">分类测试</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-27T14:22:51.225Z">2019-02-27</time></div>
+                    <a href="/2019/02/27/第一章 计算机系统/" class="has-link-black-ter is-size-6">分类测试</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/hexo/">hexo</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/02/27/cate1/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="运行时数据区域">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-27T13:38:51.294Z">2019-02-27</time></div>
-                    <a href="/2019/02/27/cate1/" class="has-link-black-ter is-size-6">运行时数据区域</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Java虚拟机/">Java虚拟机</a> / <a class="has-link-grey -link" href="/categories/Java虚拟机/Jvm基础/">Jvm基础</a>
                     </p>
                 </div>
             </div>
@@ -944,6 +700,25 @@
             </div>
         </article>
         
+        <article class="media">
+            
+            <a href="/2019/02/25/hello-world/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-25T14:17:34.508Z">2019-02-25</time></div>
+                    <a href="/2019/02/25/hello-world/" class="has-link-black-ter is-size-6">Hello World</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
     </div>
 </div>
 
@@ -962,7 +737,7 @@
                     <span class="level-item">February 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">8</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
