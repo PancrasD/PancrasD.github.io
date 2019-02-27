@@ -2,7 +2,7 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Category: 计算机操作系统 - dengpc</title>
+<title>Categoria: 计算机操作系统 - dengpc</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -125,13 +125,63 @@
     <div class="card-content">
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
-            <li><a href="/categories">Categories</a></li>
+            <li><a href="/categories">Categorias</a></li>
             
             <li class="is-active"><a href="#" aria-current="page">计算机操作系统</a></li>
         </ul>
         </nav>
     </div>
 </div>
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-02-27T14:36:03.407Z">2019-02-27</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/计算机操作系统/">计算机操作系统</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 minutes read (About 625 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2019/02/27/第二章 信息表示/">第二章 信息表示</a>
+            
+        </h1>
+        <div class="content">
+            <p>字长：指明指针数据的标称大小。<br>虚拟地址是以一个字来编码的。<br>字长决定的最重要的系统参数是虚拟地址空间的最大大小。<br>32位字长限制虚拟地址空间为4GB 4*10^9 字节。64位字长限制虚拟机地址空间为16EB。</p>
+<p>逻辑运算与位运算<br>位运算：&amp; |  ^    位运算 0 1<br>逻辑运算：&amp;&amp;  ||  ！ 逻辑运算非0为1,true   0为0 ,false  逻辑运算如果对第一个参数求值就能确定表达式的结果，那么逻辑运算符就不会对第二个参数求值。<br>移位运算：移位运算从左至右是可结合的 x&gt;&gt;j&gt;&gt;k等价于x&gt;&gt;k&gt;&gt;j<br>左移：右端补0<br>右移：逻辑右移  算术右移<br>逻辑右移：在左端补0<br>算术右移：左端补k个最高有效位的值  对于有符号数运算有用<br>C语言标准：几乎所有的编译器/机器组合对有符号数使用算术右移 ，对于无符号数，右移采用逻辑右移。<br>java标准：x&gt;&gt;k为算术右移，x&gt;&gt;&gt;k为逻辑右移。<br>移位量k小于数值位数w,如果k&gt;=w，k=k mod w。<br>整数:</p>
+<p>1无符号数编码</p>
+<p>2.补码编码</p>
+<p>补码编码，最高位解释为负权，也称之为符号位，权重为-2^(w-1)，无符号表示的权重的负数。符号位为1，表示值为负，值为0，表示非负。</p>
+<p>补码的范围是不对称的：|Tmin|=|Tmax|+1<br>原因：一半的位模式（符号位为1的数）表示负数，另一半的位（符号位设置为0的数）表示非负数。因为0是非负数，这意味能表示的正数比负数少一个。<br>最大的无符号数刚好比补码的最大值的两倍大1：Umax=2Tmax+1<br>-1和Umax具有同样的位表示，一个全1的串。<br>c标准没有要求使用补码表示有符号整数，但是几乎所有的机器都是这么做的。<br>使用补码来编码有符号数，具有图2-9和2-10的典型的取值范围。<br>java只有有符号数。在java标准中，整数数据类型的取值采用补码表示。在java中单字节数据类型称为byte，而不是char。</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
 
     <div class="card">
     
@@ -228,27 +278,27 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Posts
+                        Entradas
                     </p>
                     <p class="title has-text-weight-normal">
-                        5
+                        6
                     </p>
                 </div>
             </div>
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Categories
+                        Categorias
                     </p>
                     <p class="title has-text-weight-normal">
-                        2
+                        3
                     </p>
                 </div>
             </div>
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Tags
+                        Etiquetas
                     </p>
                     <p class="title has-text-weight-normal">
                         0
@@ -258,7 +308,7 @@
         </nav>
         <div class="level">
             <a class="level-item button is-link is-rounded" href="https://pancrasd.github.io/">
-                Follow</a>
+                SEGUIR</a>
         </div>
         
         
@@ -341,34 +391,11 @@
 
     
         
-<div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                Categories
-            </h3>
-            <ul class="menu-list">
-            <li>
-        <a class="level is-marginless" href="/categories/java虚拟机/">
-            <span class="level-start">
-                <span class="level-item">java虚拟机</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li><li>
-        <a class="level is-marginless" href="/categories/计算机操作系统/">
-            <span class="level-start">
-                <span class="level-item">计算机操作系统</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li>
-            </ul>
-        </div>
-    </div>
+<div class="widget tag">
+  <h3 class="title">categories</h3>
+     <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/java虚拟机/">java虚拟机</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/java虚拟机/Jvm基础知识/">Jvm基础知识</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/计算机操作系统/">计算机操作系统</a><span class="category-list-count">2</span></li></ul> 
 </div>
+
 
     
         
@@ -380,12 +407,12 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            Recientes
         </h3>
         
         <article class="media">
             
-            <a href="/2019/02/27/第二章 信息表示/" class="media-left">
+            <a href="/2019/02/27/Untitled/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt>
                 </p>
@@ -393,10 +420,29 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-27T14:36:03.407Z">2019-02-27</time></div>
-                    <a href="/2019/02/27/第二章 信息表示/" class="has-link-black-ter is-size-6"></a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-27T14:41:09.288Z">2019-02-27</time></div>
+                    <a href="/2019/02/27/Untitled/" class="has-link-black-ter is-size-6"></a>
                     <p class="is-size-7 is-uppercase">
                         
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/02/27/第二章 信息表示/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第二章 信息表示">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-27T14:36:03.407Z">2019-02-27</time></div>
+                    <a href="/2019/02/27/第二章 信息表示/" class="has-link-black-ter is-size-6">第二章 信息表示</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/计算机操作系统/">计算机操作系统</a>
                     </p>
                 </div>
             </div>
@@ -434,7 +480,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-27T13:38:51.294Z">2019-02-27</time></div>
                     <a href="/2019/02/27/运行时数据区域/" class="has-link-black-ter is-size-6">运行时数据区域</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/java虚拟机/">java虚拟机</a>
+                        <a class="has-link-grey -link" href="/categories/java虚拟机/">java虚拟机</a> / <a class="has-link-grey -link" href="/categories/java虚拟机/Jvm基础知识/">Jvm基础知识</a>
                     </p>
                 </div>
             </div>
@@ -459,25 +505,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/02/25/hello-world/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-25T14:17:34.508Z">2019-02-25</time></div>
-                    <a href="/2019/02/25/hello-world/" class="has-link-black-ter is-size-6">Hello World</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -486,7 +513,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            Archivos
         </h3>
         <ul class="menu-list">
         
@@ -496,7 +523,7 @@
                     <span class="level-item">February 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">6</span>
                 </span>
             </a>
         </li>
@@ -510,7 +537,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                Etiquetas
             </h3>
             <div class="field is-grouped is-grouped-multiline">
                 
@@ -534,12 +561,12 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            Recientes
         </h3>
         
         <article class="media">
             
-            <a href="/2019/02/27/第二章 信息表示/" class="media-left">
+            <a href="/2019/02/27/Untitled/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt>
                 </p>
@@ -547,10 +574,29 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-27T14:36:03.407Z">2019-02-27</time></div>
-                    <a href="/2019/02/27/第二章 信息表示/" class="has-link-black-ter is-size-6"></a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-27T14:41:09.288Z">2019-02-27</time></div>
+                    <a href="/2019/02/27/Untitled/" class="has-link-black-ter is-size-6"></a>
                     <p class="is-size-7 is-uppercase">
                         
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/02/27/第二章 信息表示/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第二章 信息表示">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-27T14:36:03.407Z">2019-02-27</time></div>
+                    <a href="/2019/02/27/第二章 信息表示/" class="has-link-black-ter is-size-6">第二章 信息表示</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/计算机操作系统/">计算机操作系统</a>
                     </p>
                 </div>
             </div>
@@ -588,7 +634,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-27T13:38:51.294Z">2019-02-27</time></div>
                     <a href="/2019/02/27/运行时数据区域/" class="has-link-black-ter is-size-6">运行时数据区域</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/java虚拟机/">java虚拟机</a>
+                        <a class="has-link-grey -link" href="/categories/java虚拟机/">java虚拟机</a> / <a class="has-link-grey -link" href="/categories/java虚拟机/Jvm基础知识/">Jvm基础知识</a>
                     </p>
                 </div>
             </div>
@@ -613,25 +659,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/02/25/hello-world/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hello World">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-02-25T14:17:34.508Z">2019-02-25</time></div>
-                    <a href="/2019/02/25/hello-world/" class="has-link-black-ter is-size-6">Hello World</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -640,7 +667,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            Archivos
         </h3>
         <ul class="menu-list">
         
@@ -650,7 +677,7 @@
                     <span class="level-item">February 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">6</span>
                 </span>
             </a>
         </li>
@@ -664,7 +691,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                Etiquetas
             </h3>
             <div class="field is-grouped is-grouped-multiline">
                 
@@ -843,10 +870,10 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Posts',
+                POSTS: 'Entradas',
                 PAGES: 'Pages',
-                CATEGORIES: 'Categories',
-                TAGS: 'Tags',
+                CATEGORIES: 'Categorias',
+                TAGS: 'Etiquetas',
                 UNTITLED: '(Untitled)',
             },
             CONTENT_URL: '/content.json',
