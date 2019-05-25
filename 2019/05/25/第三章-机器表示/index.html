@@ -2,18 +2,35 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Categories - dengpc</title>
+<title>第三章-机器表示 - dengpc</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="dengpc">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+    <meta name="description" content="1数据类型字节大小每个寄存器都有特殊的用途，它们的名字反应了这些不同的用途。指令可以对这16个寄存器的低位字节中存放的不同大小的数据进行操作。字节级操作可以访问最低的字节，16位操作可以访问最低的2个字节，32位操作可以访问最低的2个字节，64位操作可以访问整个寄存器。 2 寄存器当指令以寄存器为目标时，对于生成小于8字节结果的指令，寄存器中剩余的字节会怎么样，对此有两条规则：生成1字节和两字节数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第三章-机器表示">
+<meta property="og:url" content="http://yoursite.com/2019/05/25/第三章-机器表示/index.html">
 <meta property="og:site_name" content="dengpc">
+<meta property="og:description" content="1数据类型字节大小每个寄存器都有特殊的用途，它们的名字反应了这些不同的用途。指令可以对这16个寄存器的低位字节中存放的不同大小的数据进行操作。字节级操作可以访问最低的字节，16位操作可以访问最低的2个字节，32位操作可以访问最低的2个字节，64位操作可以访问整个寄存器。 2 寄存器当指令以寄存器为目标时，对于生成小于8字节结果的指令，寄存器中剩余的字节会怎么样，对此有两条规则：生成1字节和两字节数">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2019/05/25/第三章-机器表示/截图1.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/25/第三章-机器表示/截图2.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/25/第三章-机器表示/截图3.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/25/第三章-机器表示/截图4.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/25/第三章-机器表示/截图5.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/25/第三章-机器表示/截图6.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/25/第三章-机器表示/截图7.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/25/第三章-机器表示/截图8.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/25/第三章-机器表示/截图9.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/25/第三章-机器表示/截图10.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/25/第三章-机器表示/截图11.png">
+<meta property="og:image" content="http://yoursite.com/2019/05/25/第三章-机器表示/截图12.png">
+<meta property="og:updated_time" content="2019-05-25T13:41:24.710Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="dengpc">
+<meta name="twitter:title" content="第三章-机器表示">
+<meta name="twitter:description" content="1数据类型字节大小每个寄存器都有特殊的用途，它们的名字反应了这些不同的用途。指令可以对这16个寄存器的低位字节中存放的不同大小的数据进行操作。字节级操作可以访问最低的字节，16位操作可以访问最低的2个字节，32位操作可以访问最低的2个字节，64位操作可以访问整个寄存器。 2 寄存器当指令以寄存器为目标时，对于生成小于8字节结果的指令，寄存器中剩余的字节会怎么样，对此有两条规则：生成1字节和两字节数">
+<meta name="twitter:image" content="http://yoursite.com/2019/05/25/第三章-机器表示/截图1.png">
 
 
 
@@ -85,7 +102,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="dengpc" height="28">
+                <img src="/images/logo.svg" alt="第三章-机器表示" height="28">
             
             </a>
         </div>
@@ -97,7 +114,7 @@
                 
                 <a class="navbar-item" href="/archives">Archives</a>
                 
-                <a class="navbar-item is-active" href="/categories">Categories</a>
+                <a class="navbar-item" href="/categories">Categories</a>
                 
                 <a class="navbar-item" href="/tags">Tags</a>
                 
@@ -121,43 +138,102 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-<div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                Categories
-            </h3>
-            <ul class="menu-list">
-            <li>
-        <a class="level is-marginless" href="/categories/java虚拟机/">
-            <span class="level-start">
-                <span class="level-item">java虚拟机</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">2</span>
-            </span>
-        </a><ul><li>
-        <a class="level is-marginless" href="/categories/java虚拟机/Jvm基础知识/">
-            <span class="level-start">
-                <span class="level-item">Jvm基础知识</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">2</span>
-            </span>
-        </a></li></ul></li><li>
-        <a class="level is-marginless" href="/categories/计算机操作系统/">
-            <span class="level-start">
-                <span class="level-item">计算机操作系统</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">5</span>
-            </span>
-        </a></li>
-            </ul>
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-05-25T13:36:25.000Z">2019-05-25</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/计算机操作系统/">计算机操作系统</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 minutes read (About 440 words)
+                </span>
+                
+                
+            </div>
         </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                第三章-机器表示
+            
+        </h1>
+        <div class="content">
+            <h2 id="1数据类型字节大小"><a href="#1数据类型字节大小" class="headerlink" title="1数据类型字节大小"></a>1数据类型字节大小</h2><p><img src="/2019/05/25/第三章-机器表示/截图1.png" alt><br>每个寄存器都有特殊的用途，它们的名字反应了这些不同的用途。<br>指令可以对这16个寄存器的低位字节中存放的不同大小的数据进行操作。<br>字节级操作可以访问最低的字节，16位操作可以访问最低的2个字节，32位操作可以访问最低的2个字节，64位操作可以访问整个寄存器。</p>
+<h2 id="2-寄存器"><a href="#2-寄存器" class="headerlink" title="2 寄存器"></a>2 寄存器</h2><p><img src="/2019/05/25/第三章-机器表示/截图2.png" alt><br>当指令以寄存器为目标时，对于生成小于8字节结果的指令，寄存器中剩余的字节会怎么样，对此有两条规则：生成1字节和两字节数字的指令会保持剩下的字节不变，生成4字节数字的指令会把高位4个字节置为0。<br>%rsp:栈指针，用来指明运行时栈的结束位置。<br>大多数指令有一个或多个操作数，指示出执行一个操作中要使用的原数据值，以及放置结果的目的位置。<br><img src="/2019/05/25/第三章-机器表示/截图3.png" alt></p>
+<h2 id="3-操作数格式"><a href="#3-操作数格式" class="headerlink" title="3 操作数格式"></a>3 操作数格式</h2><p><img src="/2019/05/25/第三章-机器表示/截图4.png" alt></p>
+<h2 id="4-数据传送指令mov"><a href="#4-数据传送指令mov" class="headerlink" title="4 数据传送指令mov"></a>4 数据传送指令mov</h2><p><img src="/2019/05/25/第三章-机器表示/截图5.png" alt></p>
+<p><img src="/2019/05/25/第三章-机器表示/截图6.png" alt></p>
+<h2 id="5-栈操作"><a href="#5-栈操作" class="headerlink" title="5 栈操作"></a>5 栈操作</h2><p><img src="/2019/05/25/第三章-机器表示/截图7.png" alt></p>
+<h2 id="6-整数算术操作"><a href="#6-整数算术操作" class="headerlink" title="6 整数算术操作"></a>6 整数算术操作</h2><p><img src="/2019/05/25/第三章-机器表示/截图8.png" alt></p>
+<h2 id="7条件码"><a href="#7条件码" class="headerlink" title="7条件码"></a>7条件码</h2><p><img src="/2019/05/25/第三章-机器表示/截图9.png" alt></p>
+<h2 id="8比较和测试指令"><a href="#8比较和测试指令" class="headerlink" title="8比较和测试指令"></a>8比较和测试指令</h2><p><img src="/2019/05/25/第三章-机器表示/截图10.png" alt></p>
+<h2 id="9-set指令"><a href="#9-set指令" class="headerlink" title="9 set指令"></a>9 set指令</h2><p><img src="/2019/05/25/第三章-机器表示/截图11.png" alt></p>
+<h2 id="10-jump指令"><a href="#10-jump指令" class="headerlink" title="10 jump指令"></a>10 jump指令</h2><p><img src="/2019/05/25/第三章-机器表示/截图12.png" alt></p>
+
+        </div>
+        
+        
+        
     </div>
-</div></div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/05/25/运行时数据区域/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">运行时数据区域</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/05/25/第三章-过程：过程提供一种封装/">
+                <span class="level-item">第三章-过程：过程提供一种封装</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: false,
+        verify: false,
+        app_id: 'f7wxt6lTxQu4PNGq98wQdH8A-gzGzoHsz',
+        app_key: 'MfF5DaedmLawsCquecqEyOy1',
+        placeholder: 'ヾﾉ≧∀≦)o 来呀！快活呀！~'
+    });
+</script>
+
+    </div>
+</div>
+</div>
                 
 
 
@@ -683,7 +759,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="dengpc" height="28">
+                    <img src="/images/logo.svg" alt="第三章-机器表示" height="28">
                 
                 </a>
                 <p class="is-size-7">
