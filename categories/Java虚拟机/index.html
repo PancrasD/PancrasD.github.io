@@ -207,80 +207,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-02-27T13:38:51.294Z">2019-02-27</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/java虚拟机/">java虚拟机</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/java虚拟机/Jvm基础知识/">Jvm基础知识</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    7 minutes read (About 988 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/02/27/temp/运行时数据区域/">运行时数据区域</a>
-            
-        </h1>
-        <div class="content">
-            <p>java虚拟机运行时数据区域</p>
-<h2 id="1-程序计数器"><a href="#1-程序计数器" class="headerlink" title="1 程序计数器"></a>1 程序计数器</h2><pre><code>• 较小的内存区域，存储当前线程执行的字节码的行号。
-• 线程私有。
-• 如果执行java方法，存储的是行号；如果执行的是nativ方法，值为空。
-• 字节码解释器通过改变计数器的值来选取下一条执行的字节码指令。
-• 唯一一个在Java虚拟机规范中没有规定任何OutOfMemoryError情况的区域。
-</code></pre><h2 id="2-java虚拟机栈"><a href="#2-java虚拟机栈" class="headerlink" title="2 java虚拟机栈"></a>2 java虚拟机栈</h2><pre><code>• 线程私有。
-• 生命周期同线程一样。
-• 由一个个栈帧组成。一个栈帧存储局部变量表、操作数栈、动态链接、方法出口。一个方法的调用对应一个栈帧的创建、方法的调用与返回就是栈帧入栈出栈的过程。
-• 局部变量表存储编译期可知的各种基本数据类型、对象引用(对应指向对象的地址或者指向对象的句柄)、returnAddress类型。
-• 操作数栈从局部变量表中取得变量入栈、然后出栈进行运算、将运算结果存回栈，出栈存入局部变量表。
-</code></pre><p>存在两种异常：<br>        如果线程请求的栈深度大于虚拟机所允许的深度， 将抛出StackOverflowError异常；<br> 如果虚拟机栈可以动态扩展（ 当前大部分的Java虚拟机都可动态扩展， 只不过Java虚拟机规范中也允许固定长度的虚拟机栈） ， 如果扩展时无法申请到足够的内存， 就会抛出OutOfMemoryError异常。 </p>
-<h2 id="3本地方法栈"><a href="#3本地方法栈" class="headerlink" title="3本地方法栈"></a>3本地方法栈</h2><pre><code>• java虚拟机栈为java方法调用服务，本地方法栈为native方法调用服务。
-• 本地方法栈区域也会抛出StackOverflowError和OutOfMemoryError异常。 
-</code></pre><h2 id="4java堆"><a href="#4java堆" class="headerlink" title="4java堆"></a>4java堆</h2><pre><code>• 线程共享。
-• 虚拟机启动时创建。java虚拟机管理的最大的内存区域。
-• 存放对象实例，几乎所有的对象实例都在堆上分配。
-• java堆可以处于物理上不连续的内存空间中，只要逻辑上是连续的即可。
-• 如果在堆中没有内存完成实例分配， 并且堆也无法再扩展时， 将会抛出OutOfMemoryError异常。 
-• 可分为新生代和老年代，新生代又可分为Eden空间、 From Survivor空间、 To Survivor空间 ，划分的目的是为了更好的内存回收和分配。
-</code></pre><h2 id="5方法区"><a href="#5方法区" class="headerlink" title="5方法区"></a>5方法区</h2><pre><code>• 线程共享。
-• 存储虚拟机加载的类信息、常量、静态变量、编译后的代码。
-• 不需要连续的内存，可以选择固定大小和可扩展，同时可以设置不进行垃圾收集。
-• 内存回收主要针对常量池和对类型的卸载。
-</code></pre><h2 id="6运行时常量池"><a href="#6运行时常量池" class="headerlink" title="6运行时常量池"></a>6运行时常量池</h2><pre><code>• 存储编译期的字面量和符号引用。
-• 具有动态性，并非预置入Class文件中常量池的内容才能进入方法区运行时常量池， 运行期间也可能将新的常量放入池中，如String类的intern（ ） 方法。 
-</code></pre><p>从更高的一个维度再次来看JVM和系统调用之间的关系：</p>
-<p>如何通过参数来控制各区域的内存大小</p>
-<p>控制参数<br>-Xms设置堆的最小空间大小。<br>-Xmx设置堆的最大空间大小。<br>-XX:NewSize设置新生代最小空间大小。<br>-XX:MaxNewSize设置新生代最大空间大小。<br>-XX:PermSize设置永久代最小空间大小。<br>-XX:MaxPermSize设置永久代最大空间大小。<br>-Xss设置每个线程的堆栈大小。</p>
-<p>ref:<a href="https://www.cnblogs.com/ityouknow/p/5610232.html" target="_blank" rel="noopener">https://www.cnblogs.com/ityouknow/p/5610232.html</a> </p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 </div>
                 
 
@@ -324,7 +250,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        12
+                        5
                     </p>
                 </div>
             </div>
@@ -447,7 +373,7 @@
                 <span class="level-item">java虚拟机</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">1</span>
             </span>
         </a><ul><li>
         <a class="level is-marginless" href="/categories/java虚拟机/Jvm基础知识/">
@@ -455,7 +381,7 @@
                 <span class="level-item">Jvm基础知识</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">1</span>
             </span>
         </a></li></ul></li><li>
         <a class="level is-marginless" href="/categories/计算机操作系统/">
@@ -463,7 +389,7 @@
                 <span class="level-item">计算机操作系统</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">5</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li>
             </ul>
@@ -596,18 +522,7 @@
                     <span class="level-item">May 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">6</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/02/">
-                <span class="level-start">
-                    <span class="level-item">February 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">6</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -761,18 +676,7 @@
                     <span class="level-item">May 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">6</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2019/02/">
-                <span class="level-start">
-                    <span class="level-item">February 2019</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">6</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
