@@ -2,7 +2,7 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Catégorie: 计算机操作系统 - dengpc</title>
+<title>Categoria: 计算机操作系统 - dengpc</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -125,7 +125,7 @@
     <div class="card-content">
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
-            <li><a href="/categories">Catégories</a></li>
+            <li><a href="/categories">Categorias</a></li>
             
             <li class="is-active"><a href="#" aria-current="page">计算机操作系统</a></li>
         </ul>
@@ -164,30 +164,30 @@
         <div class="content">
             <p>字长：指明指针数据的标称大小。<br>虚拟地址是以一个字来编码的。<br>字长决定的最重要的系统参数是虚拟地址空间的最大大小。<br>32位字长限制虚拟地址空间为4GB 4*10^9 字节。64位字长限制虚拟机地址空间为16EB。</p>
 <p>逻辑运算与位运算<br>位运算：&amp; |  ^    位运算 0 1<br>逻辑运算：&amp;&amp;  ||  ！ 逻辑运算非0为1,true   0为0 ,false  逻辑运算如果对第一个参数求值就能确定表达式的结果，那么逻辑运算符就不会对第二个参数求值。<br>移位运算：移位运算从左至右是可结合的 x&gt;&gt;j&gt;&gt;k等价于x&gt;&gt;k&gt;&gt;j<br>左移：右端补0<br>右移：逻辑右移  算术右移<br>逻辑右移：在左端补0<br>算术右移：左端补k个最高有效位的值  对于有符号数运算有用<br>C语言标准：几乎所有的编译器/机器组合对有符号数使用算术右移 ，对于无符号数，右移采用逻辑右移。<br>java标准：x&gt;&gt;k为算术右移，x&gt;&gt;&gt;k为逻辑右移。<br>移位量k小于数值位数w,如果k&gt;=w，k=k mod w。<br>整数:</p>
-<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图 (1" alt>.png)</p>
-<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图 (2" alt>.png)</p>
-<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图 (3" alt>.png)</p>
-<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图 (4" alt>.png)</p>
-<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图 (5" alt>.png)</p>
+<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图1.png" alt></p>
+<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图2.png" alt></p>
+<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图3.png" alt></p>
+<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图4.png" alt></p>
+<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图5.png" alt></p>
 <p>1无符号数编码</p>
-<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图 (6" alt>.png)</p>
-<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图 (7" alt>.png)</p>
+<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图6.png" alt></p>
+<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图7.png" alt></p>
 <p>2.补码编码</p>
-<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图 (8" alt>.png)</p>
+<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图8.png" alt></p>
 <p>补码编码，最高位解释为负权，也称之为符号位，权重为-2^(w-1)，无符号表示的权重的负数。符号位为1，表示值为负，值为0，表示非负。</p>
-<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图 (9" alt>.png)</p>
+<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图9.png" alt></p>
 <p>补码的范围是不对称的：|Tmin|=|Tmax|+1<br>原因：一半的位模式（符号位为1的数）表示负数，另一半的位（符号位设置为0的数）表示非负数。因为0是非负数，这意味能表示的正数比负数少一个。<br>最大的无符号数刚好比补码的最大值的两倍大1：Umax=2Tmax+1<br>-1和Umax具有同样的位表示，一个全1的串。<br>c标准没有要求使用补码表示有符号整数，但是几乎所有的机器都是这么做的。<br>使用补码来编码有符号数，具有图2-9和2-10的典型的取值范围。<br>java只有有符号数。在java标准中，整数数据类型的取值采用补码表示。在java中单字节数据类型称为byte，而不是char。</p>
-<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图 (10" alt>.png)</p>
-<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图 (11" alt>.png)</p>
-<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图 (12" alt>.png)</p>
-<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图 (13" alt>.png)</p>
-<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图 (14" alt>.png)</p>
-<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图 (15" alt>.png)</p>
-<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图 (16" alt>.png)</p>
-<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图 (17" alt>.png)</p>
-<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图 (18" alt>.png)</p>
-<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图 (19" alt>.png)</p>
-<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图 (20" alt>.png)</p>
+<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图10.png" alt></p>
+<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图11.png" alt></p>
+<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图12.png" alt></p>
+<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图13.png" alt></p>
+<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图14.png" alt></p>
+<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图15.png" alt></p>
+<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图16.png" alt></p>
+<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图17.png" alt></p>
+<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图18.png" alt></p>
+<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图19.png" alt></p>
+<p><img src="/PancrasD/PancrasD.github.io/2019/05/24/第二章-信息表示/截图20.png" alt></p>
 
         </div>
         
@@ -354,7 +354,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Articles
+                        Entradas
                     </p>
                     <p class="title has-text-weight-normal">
                         8
@@ -364,7 +364,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Catégories
+                        Categorias
                     </p>
                     <p class="title has-text-weight-normal">
                         3
@@ -374,7 +374,7 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Tags
+                        Etiquetas
                     </p>
                     <p class="title has-text-weight-normal">
                         0
@@ -384,7 +384,7 @@
         </nav>
         <div class="level">
             <a class="level-item button is-link is-rounded" href="https://pancrasd.github.io/">
-                SUIVRE</a>
+                SEGUIR</a>
         </div>
         
         
@@ -433,7 +433,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Liens
+            Links
         </h3>
         <ul class="menu-list">
         
@@ -471,7 +471,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Catégories
+                Categorias
             </h3>
             <ul class="menu-list">
             <li>
@@ -513,7 +513,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Récents
+            Recientes
         </h3>
         
         <article class="media">
@@ -619,7 +619,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            Archivos
         </h3>
         <ul class="menu-list">
         
@@ -654,7 +654,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                Etiquetas
             </h3>
             <div class="field is-grouped is-grouped-multiline">
                 
@@ -678,7 +678,7 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Récents
+            Recientes
         </h3>
         
         <article class="media">
@@ -784,7 +784,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            Archivos
         </h3>
         <ul class="menu-list">
         
@@ -819,7 +819,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                Etiquetas
             </h3>
             <div class="field is-grouped is-grouped-multiline">
                 
@@ -952,7 +952,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
 
-<a id="back-to-top" title="Kembali ke atas" href="javascript:;">
+<a id="back-to-top" title="Back to Top" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
@@ -998,10 +998,10 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Articles',
+                POSTS: 'Entradas',
                 PAGES: 'Pages',
-                CATEGORIES: 'Catégories',
-                TAGS: 'Tags',
+                CATEGORIES: 'Categorias',
+                TAGS: 'Etiquetas',
                 UNTITLED: '(Untitled)',
             },
             CONTENT_URL: '/content.json',
